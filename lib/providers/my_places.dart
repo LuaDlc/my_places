@@ -46,7 +46,7 @@ class MyPlaces with ChangeNotifier {
     File image,
     LatLng position,
   ) async {
-    String adress = await LocationUtil.getAdress(position);
+    String adress = await LocationUtil.pegarEndereco(position);
     final newPlace = Place(
         id: Random().nextDouble().toString(),
         title: title,
