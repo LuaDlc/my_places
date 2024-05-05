@@ -18,4 +18,10 @@ class LocationUtil {
     final response = await http.get(url as Uri);
     return json.decode(response.body)['results'][0]['formatted_adress'];
   }
+
+  static Future<String> getAdress(LatLng position) async {
+    const url = '';
+    final response = await http.get(url as Uri);
+    return json.decode(response.body)['results'][0]['formatted_adress'];
+  }
 }
