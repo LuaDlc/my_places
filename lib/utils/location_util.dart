@@ -14,7 +14,7 @@ class LocationUtil {
   }
 
   static Future<String> pegarEndereco(LatLng position) async {
-    final url = '';
+    const url = '';
     final response = await http.get(url as Uri);
     return json.decode(response.body)['results'][0]['formatted_adress'];
   }
