@@ -28,4 +28,9 @@ class DbUtil {
     final db = await DbUtil.database();
     await db.insert(table, data, conflictAlgorithm: ConflictAlgorithm.replace);
   }
+
+  static Future<void> newInsert(String table, Map<String, Object> data) async {
+    final db = await DbUtil.database();
+    await db.insert(table, data, conflictAlgorithm: ConflictAlgorithm.replace);
+  }
 }
